@@ -5,7 +5,7 @@ from speciallecture.sample import CSVPrinter
 
 class TESTCSVPrinter(unittest.TestCase):
     def test_read(self):
-        printer = CSVPrinter('sample.csv')
+        printer = CSVPrinter('../speciallecture/sample.csv')
         l = printer.read()
         # len(l) = 3
         self.assertEqual(3,len(l))
