@@ -3,11 +3,10 @@ import sys
 sys.path.append('../')
 from speciallecture.sample import CSVPrinter
 import subprocess
-import os
 
 class TESTCSVPrinter(unittest.TestCase):
     def test_read(self):
-        print(os.path)
+        subprocess('ls', shell=True)
         printer = CSVPrinter('./speciallecture/sample.csv')
         l = printer.read()
         # len(l) = 3
