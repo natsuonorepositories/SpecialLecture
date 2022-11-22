@@ -1,6 +1,6 @@
 import unittest
 import sys
-sys.path.append('../')
+sys.path.append('../speciallecture')
 from speciallecture.sample import CSVPrinter
 import subprocess
 
@@ -9,13 +9,13 @@ class TESTCSVPrinter(unittest.TestCase):
         print('a')
         subprocess.run('ls', shell=True)
         print('b')
-        printer = CSVPrinter('./speciallecture/sample.csv')
+        printer = CSVPrinter('/test/sample.csv')
         l = printer.read()
         # len(l) = 3
         self.assertEqual(3,len(l))
         
     def test_read2(self):
-        printer = CSVPrinter('./speciallecture/sample.csv')
+        printer = CSVPrinter('/test/sample.csv')
         line = printer.read()
         self.assertEqual('value2B', line[1][1])
         
@@ -26,6 +26,5 @@ class TESTCSVPrinter(unittest.TestCase):
            unittest.TestCase.fail("This line not should be invoked.")
         except:
             print('File name error') 
-        
 
         
