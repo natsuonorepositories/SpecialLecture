@@ -5,13 +5,13 @@ from speciallecture.sample import CSVPrinter
 
 class TESTCSVPrinter(unittest.TestCase):
     def test_read(self):
-        printer = CSVPrinter('../speciallecture/sample.csv')
+        printer = CSVPrinter('/speciallecture/sample.csv')
         l = printer.read()
         # len(l) = 3
         self.assertEqual(3,len(l))
         
     def test_read2(self):
-        printer = CSVPrinter('sample.csv')
+        printer = CSVPrinter('/speciallecture/sample.csv')
         line = printer.read()
         self.assertEqual('value2B', line[1][1])
         
