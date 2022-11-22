@@ -6,7 +6,7 @@ import subprocess
 
 class TESTCSVPrinter(unittest.TestCase):
     def test_read(self):
-        subprocess('ls', shell=True)
+        subprocess.run('ls', shell=True)
         printer = CSVPrinter('./speciallecture/sample.csv')
         l = printer.read()
         # len(l) = 3
